@@ -1,0 +1,33 @@
+{
+  "name": "tomasznicieja.pl-html",
+  "version": "1.0.0",
+  "description": "tomasznicieja.pl HTML website",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel liveserver watch",
+    "liveserver": "live-server",
+    "watch": "node-sass sass/main.scss build/css/style.css -w",
+    "compile": "node-sass sass/main.scss build/css/style.css",
+    "prefix": "postcss build/css/style.css --use autoprefixer -o build/css/style.css",
+    "compress": "node-sass build/css/style.css build/css/style.css --output-style compressed",
+    "build": "npm-run-all compile prefix compress",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/entom/tomasznicieja.pl-html.git"
+  },
+  "author": "Tomasz Nicieja <tomasznicieja@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/entom/tomasznicieja.pl-html/issues"
+  },
+  "homepage": "https://github.com/entom/tomasznicieja.pl-html#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "live-server": "^1.2.1",
+    "node-sass": "^7.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^9.1.0"
+  }
+}

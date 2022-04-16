@@ -6,7 +6,7 @@ footer {
     text-align: right;
     padding: 15px;
 
-    @media (max-width: 700px) {
+    @media (max-width: $screenSmall) {
         text-align: center;
     }
 }

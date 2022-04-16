@@ -1,0 +1,52 @@
+.link {
+    color: #FFF;
+    font-size: 24px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: all 250ms ease-in-out;
+    text-decoration: none;
+    margin-right: 30px;
+
+    @media (max-width: $screenSmall) {
+        flex-direction: row-reverse;
+    }
+
+    i {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    &:hover {
+        text-decoration: none;
+        cursor: pointer;
+        color: #ddd;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-flex;
+
+        &.icon-github {
+            background-image: url('/img/github-square-brands.svg');
+        }
+
+        &.icon-twitter {
+            background-image: url('/img/twitter-square-brands.svg');
+        }
+
+        &.icon-linkedin {
+            background-image: url('/img/linkedin-brands.svg');
+        }
+
+        &.icon-facebook {
+            background-image: url('/img/facebook-square-brands.svg');
+        }
+    }
+}
